@@ -13,12 +13,30 @@ def home():
 	)
 	cursor = conn.cursor()
 	cursor.execute("SELECT 'Hello from MySQL'")
-	result = cursor.fetchone()
+	mysql_message = cursor.fetchone()[0]
+
+	cursor.execute("SELECT CURTIME()")
+	mysql_time = cursor.fetchone()[0]
 
 	cursor.close()
 	conn.close()
 
-	return f"<h1>{result[0]}</h1>"
+	html =  f"""
+	<html>
+		<head>
+			<title>Linux Administration LEMP sivu</title>
+		</head>
+		<body>
+			<h1>Linux Administration LEMP sivu</h1>
+			<p>{mysql_message}</p>
+			<p>MySQL server time {mysql_time}</p>
+			<p>Streamlit app <a href="/data-analysis">linkki</a> jota NGINX ei suostu näyttämään</p>
+		</body>
+	</html>
+	"""
+
+
+	return html
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
