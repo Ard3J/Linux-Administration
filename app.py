@@ -2,29 +2,41 @@ from flask import Flask
 import mysql.connector
 
 app = Flask(__name__)
-
 @app.route('/')
+
 def home():
 	conn = mysql.connector.connect(
 		host="localhost",
 		user="exampleuser",
-		password="Salasan@",
+		password="Salas4n@",
 		database="exampledb"
 	)
 	cursor = conn.cursor()
-	#cursor.execute("SELECT 'Minun sivu. Kello on: '") #  CURTIME()")
-	cursor.execute("SELECT 'Minun sivu.'")
-	result0 = cursor.fetchone()
-	cursor.execute("SELECT 'MySQL-serverin kello on: '")
-	result1 = cursor.fetchone()
-	cursor.execute("SELECT  CURTIME()")
-	result2 = cursor.fetchone()
-	#result = cursor.fetchall()
+	cursor.execute("SELECT 'Hello from MySQL'")
+	mysql_message = cursor.fetchone()[0]
+
+	cursor.execute("SELECT CURTIME()")
+	mysql_time = cursor.fetchone()[0]
 
 	cursor.close()
 	conn.close()
 
-	return f"<h1>{result0[0]}</h1> <p>{result1[0]} {result2[0]}</p>"
+	html =  f"""
+	<html>
+		<head>
+			<title>Linux Administration LEMP sivu</title>
+		</head>
+		<body>
+			<h1>Linux Administration LEMP sivu</h1>
+			<p>{mysql_message}</p>
+			<p>MySQL server time {mysql_time}</p>
+			<p>Streamlit app <a href="/data-analysis">linkki</a> mutta NGINX ei toimi</p>
+		</body>
+	</html>
+	"""
+
+
+	return html
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
