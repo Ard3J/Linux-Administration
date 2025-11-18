@@ -30,7 +30,7 @@ def home():
 			<h1>Linux Administration LEMP sivu</h1>
 			<p>{mysql_message}</p>
 			<p>MySQL server time {mysql_time}</p>
-			<p>Streamlit app <a href="/data-analysis">linkki</a> mutta jokin ei toimi</p>
+			<p>Streamlit app <a href="http://86.50.21.9:8501/data-analysis">linkki</a> mutta jostain syystä portti pitää siinä olla</p>
 		</body>
 	</html>
 	"""
