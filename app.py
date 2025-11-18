@@ -30,7 +30,7 @@ def home():
 			<h1>Linux Administration LEMP sivu</h1>
 			<p>{mysql_message}</p>
 			<p>MySQL server time {mysql_time}</p>
-			<p>Streamlit app <a href="/data-analysis">linkki</a> mutta NGINX ei toimi</p>
+			<p>Streamlit app <a href="/data-analysis">linkki</a> mutta jokin ei toimi</p>
 		</body>
 	</html>
 	"""
