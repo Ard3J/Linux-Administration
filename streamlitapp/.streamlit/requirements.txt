@@ -3,3 +3,5 @@ pandas
 mysqlclient
 SQLAlchemy
 scipy
+mysql-connector-python
+requests

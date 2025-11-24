@@ -1,21 +1,34 @@
 import streamlit as st
+import mysql.connector
 import pandas as pd
 import plotly.express as px
+import requests
+import os				#os ja dotenv antaa hakea .env tiedostosta salaiset asiat
+from dotenv import load_dotenv
+from streamlit_autorefresh import st_autorefresh
 
-@st.cache_resource
-def mySql():
-	conn = st.connection('mysql', type='sql')
-	df = conn.query('SELECT temp FROM temp;',ttl=600)
-	return df
+count = st_autorefresh(interval=600000,limit=None,key="weather_chart")
+#refreshaa streamlitin 5min välein, toistaa loputtomiin. Key identifioi, ei varsinaisesti väliä kun toistoja ei lasketa tai rajoiteta
 
-def main():
-	st.title("Kuukauden keskilämpötila, Oulu 2022")
-	st.write("Lämpötila")
-	data = mySql()
 
-	df2 = pd.DataFrame(data, columns=["temp"])
-	temp = px.line(df2, x=df2.index, y="temp")
-	st.plotly_chart(temp, use_container_width=True)
+load_dotenv()
+USER = os.getenv('MYSQLUSER')
+PASSWD = os.getenv('MYSQLPASS')
+NEWSAPI = os.getenv('NEWSAPI')
 
-if __name__ == "__main__":
-	main()
+conn = mysql.connector.connect(host='localhost', user=USER, password=PASSWD, database='weather_db')
+df = pd.read_sql('SELECT temperature, description, timestamp FROM weather_data ORDER BY timestamp DESC LIMIT 50', conn)
+conn.close()
+st.title('Säädata Oulusta')
+chart = px.line(df, x='timestamp',y='temperature')
+chart.update_layout(xaxis_title='Lämpötila',yaxis_title='Kellonaika')
+st.plotly_chart(chart)
+st.dataframe(df)
+
+
+conn = mysql.connector.connect(host='localhost', user=USER, password=PASSWD, database='jokes')
+jd = pd.read_sql('SELECT setup, punchline FROM jokes_data ORDER BY timestamp DESC LIMIT 10',conn)
+conn.close()
+st.title('"Hauskaa"')
+st.dataframe(jd)
+

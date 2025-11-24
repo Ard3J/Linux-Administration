@@ -1,0 +1,83 @@
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+Asennetaan riippuvuudet...
+Requirement already satisfied: pip in ./Linux-Administration/venv/lib/python3.12/site-packages (25.3)
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+Suoritetaan fetch_weather.py...
+python: can't open file '/home/ubuntu/fetch_weather.py': [Errno 2] No such file or directory
+Valmis!
+Asennetaan riippuvuudet...
+Requirement already satisfied: pip in ./Linux-Administration/venv/lib/python3.12/site-packages (25.3)
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+Suoritetaan fetch_weather.py...
+python: can't open file '/home/ubuntu/fetch_weather.py': [Errno 2] No such file or directory
+Valmis!
+Virtuaali oli jo olemassa.
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+Virtuaali oli jo olemassa.
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+Virtuaali oli jo olemassa.
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+Virtuaali oli jo olemassa.
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+Virtuaali oli jo olemassa.
+requirements.txt ei löytynyt!
+fetch_weather.py ei löytynyt!
+Valmis!
+Data tallennettu: Oulu -3.83°C overcast clouds
+Data tallennettu: Oulu -3.83°C overcast clouds
+Data tallennettu: Oulu -3.83°C overcast clouds
+Data tallennettu: Oulu -3.83°C overcast clouds
+Data tallennettu: Oulu -3.83°C overcast clouds
+Data tallennettu: Oulu -3.83°C overcast clouds
+Data tallennettu: Oulu -3.83°C overcast clouds
+Data tallennettu: Oulu -4.38°C overcast clouds
+Data tallennettu: Oulu -4.38°C overcast clouds
+Data tallennettu: Oulu -4.38°C overcast clouds
+Data tallennettu: Oulu -4.38°C overcast clouds
+Data tallennettu: Oulu -4.38°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Traceback (most recent call last):
+  File "/home/ubuntu/Linux-Administration/cron/fetch_weather.py", line 7, in <module>
+    API_KEY = os.getenv('WEATHERAPI') # '4fbd2cf611249129bbd431a6f73e9c3b'
+              ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.38°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -4.94°C overcast clouds
+Data tallennettu: Oulu -5.5°C overcast clouds
+Data tallennettu: Oulu -5.5°C overcast clouds
+Data tallennettu: Oulu -5.5°C overcast clouds

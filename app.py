@@ -26,11 +26,18 @@ def home():
 		<head>
 			<title>Linux Administration LEMP sivu</title>
 		</head>
+
+		<style>
+		  	body {{background-color: lightgray; text-align:center;padding-top: 70px}}
+			.box {{background-color: powderblue; display: inline-block; padding: 30px 30px; border-radius: 10px; box-shadow: 5px 10px 5px grey}}
+		</style>
 		<body>
-			<h1>Linux Administration LEMP sivu</h1>
-			<p>{mysql_message}</p>
-			<p>MySQL server time {mysql_time}</p>
-			<p>Streamlit app <a href="http://86.50.21.9:8501/data-analysis">linkki</a> mutta jostain syystä portti pitää siinä olla</p>
+			<div class="box">
+				<h1>Linux Administration LEMP sivu</h1>
+				<p>{mysql_message}</p>
+				<p>MySQL server time {mysql_time}</p>
+				<p>Streamlit app <a href="http://86.50.22.177:8501/data-analysis">linkki</a> mutta jostain syystä portti pitää siinä olla</p>
+			</div>
 		</body>
 	</html>
 	"""
