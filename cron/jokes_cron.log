@@ -843,3 +843,41 @@ Data tallennettu: Why did the kid cross the playground? To get to the other slid
 Data tallennettu: What do you call a girl between two posts? Annette. 2025-12-02 18:15:01.889692
 Data tallennettu: What do you call sad coffee? Despresso. 2025-12-02 18:30:01.703227
 Data tallennettu: Why do scuba divers fall backwards into the water? Because if they fell forwards they’d still be in the boat. 2025-12-02 18:45:03.240737
+Data tallennettu: What do you call sad coffee? Despresso. 2025-12-02 19:00:01.997709
+Data tallennettu: What's the difference between a hippo and a zippo? One is really heavy, the other is a little lighter. 2025-12-02 19:15:02.953733
+Data tallennettu: How many apples grow on a tree? All of them! 2025-12-02 19:30:02.809305
+Traceback (most recent call last):
+  File "/home/ubuntu/Linux-Administration/venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'setup' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Linux-Administration/cron/fetch_joke.py", line 21, in <module>
+    cursor.execute('INSERT INTO jokes_data (setup, punchline, timestamp) VALUES (%s, %s, %s)', (setup, punchline, timestamp))
+  File "/home/ubuntu/Linux-Administration/venv/lib/python3.12/site-packages/mysql/connector/cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+  File "/home/ubuntu/Linux-Administration/venv/lib/python3.12/site-packages/mysql/connector/opentelemetry/context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Linux-Administration/venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'setup' at row 1
+Data tallennettu: What is this movie about? It is about 2 hours long. 2025-12-02 20:00:01.908143
+Data tallennettu: How do you generate a random string? Put a Windows user in front of Vim and tell them to exit. 2025-12-02 20:15:01.867683
+Data tallennettu: Did you hear about the chameleon who couldn't change color? They had a reptile dysfunction. 2025-12-02 20:30:02.629580
+Data tallennettu: What's the worst thing about ancient history class? The teachers tend to Babylon. 2025-12-02 20:45:02.979313
+Data tallennettu: What do you give to a lemon in need? Lemonaid. 2025-12-02 21:00:02.317557
+Data tallennettu: Where do young cows eat lunch? In the calf-ateria. 2025-12-02 21:15:03.094256
+Data tallennettu: 99.9% of the people are dumb! Fortunately I belong to the remaining 1% 2025-12-02 21:30:02.384368
+Data tallennettu: A SQL query walks into a bar, walks up to two tables and asks... 'Can I join you?' 2025-12-02 21:45:02.300330
+Data tallennettu: I couldn't get a reservation at the library... They were fully booked. 2025-12-02 22:00:02.435626
+Data tallennettu: How do you find Will Smith in the snow? Look for fresh prints. 2025-12-02 22:15:03.023282
+Data tallennettu: Did you hear about the runner who was criticized? He just took it in stride 2025-12-02 22:30:01.839346
+Data tallennettu: Why did the coffee file a police report? It got mugged. 2025-12-02 22:45:02.582201
+Data tallennettu: How do you make the number one disappear? Add the letter G and it’s “gone”! 2025-12-02 23:00:02.582542
+Data tallennettu: Have you heard the rumor going around about butter? Never mind, I shouldn't spread it. 2025-12-02 23:15:02.251847
+Data tallennettu: While I was sleeping my friends decided to write math equations on me. You should have seen the expression on my face when I woke up. 2025-12-02 23:30:02.124393
+Data tallennettu: Why are “Dad Jokes” so good? Because the punchline is apparent. 2025-12-02 23:45:02.129415
+Data tallennettu: What are the strongest days of the week? Saturday and Sunday...the rest are weekdays. 2025-12-03 00:00:02.184274
