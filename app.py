@@ -1,14 +1,18 @@
 from flask import Flask
 import mysql.connector
+#import os				#os ja dotenv antaa hakea .env tiedostosta salaiset asiat
+#from dotenv import load_dotenv
 
 app = Flask(__name__)
 @app.route('/')
 
+#load_dotenv()
+#PASSWD = os.getenv('MYSQLPASS')
 def home():
 	conn = mysql.connector.connect(
 		host="localhost",
 		user="exampleuser",
-		password="Salas4n@",
+		password='Salas4n@',
 		database="exampledb"
 	)
 	cursor = conn.cursor()
@@ -36,7 +40,8 @@ def home():
 				<h1>Linux Administration LEMP sivu</h1>
 				<p>{mysql_message}</p>
 				<p>MySQL server time {mysql_time}</p>
-				<p>Streamlit app <a href="http://86.50.22.177:8501/data-analysis">linkki</a> mutta jostain syystä portti pitää siinä olla</p>
+				<p>Streamlit app <a href="http://86.50.21.9/data-analysis">linkki</a></p>
+				<p>MQTT chat <a href="http://86.50.21.9./chat/">linkki</a></p>
 			</div>
 		</body>
 	</html>

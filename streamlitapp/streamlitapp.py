@@ -21,7 +21,7 @@ df = pd.read_sql('SELECT temperature, description, timestamp FROM weather_data O
 conn.close()
 st.title('Säädata Oulusta')
 chart = px.line(df, x='timestamp',y='temperature')
-chart.update_layout(xaxis_title='Lämpötila',yaxis_title='Kellonaika')
+chart.update_layout(yaxis_title='Lämpötila',xaxis_title='Kellonaika')
 st.plotly_chart(chart)
 st.dataframe(df)
 
