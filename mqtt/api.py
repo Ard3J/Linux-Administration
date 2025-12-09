@@ -13,9 +13,9 @@ CORS(app)
 
 DB_CONFIG = {
 	"host": "localhost",
-	"user":"mqtt_user",
-	"password":PASSWD,
-	"database":"mqtt_chat"
+	"user": "mqtt_user",
+	"password": PASSWD,
+	"database": "mqtt_chat"
 }
 
 @app.route('/api/messages', methods=['GET'])
