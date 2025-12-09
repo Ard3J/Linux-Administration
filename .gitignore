@@ -1,6 +1,6 @@
 .env
 mqtt/mosquitto/data/
 mqtt/mosquitto/log/mosquitto.log
-kubect
-minikube-linux-amd64
+minikube/kubect
+minikube/minikube-linux-amd64
 
