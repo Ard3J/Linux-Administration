@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: frontend:1.3
+        image: frontend:1.8
         imagePullPolicy: Never  # Käytä paikallista imagea Minikubessa
         ports:
         - containerPort: 80

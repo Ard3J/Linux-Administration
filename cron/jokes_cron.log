@@ -889,3 +889,162 @@ Data tallennettu: Did you hear the one about the guy with the broken hearing aid
 Data tallennettu: Why don't eggs tell jokes? Because they would crack each other up. 2025-12-09 05:45:02.432385
 Data tallennettu: How come the stadium got hot after the game? Because all of the fans left. 2025-12-09 06:00:01.990378
 Data tallennettu: What did the duck say when he bought lipstick? Put it on my bill 2025-12-09 06:15:01.575568
+Data tallennettu: What did the janitor say when he jumped out of the closet? Supplies! 2025-12-09 06:30:02.197966
+Data tallennettu: How does a dyslexic poet write? Inverse. 2025-12-09 06:45:01.804947
+Data tallennettu: Why do bears have hairy coats? Fur protection. 2025-12-09 07:00:02.866123
+Data tallennettu: A programmer puts two glasses on his bedside table before going to sleep. A full one, in case he gets thirsty, and an empty one, in case he doesn’t. 2025-12-09 07:15:02.483579
+Data tallennettu: Why don't programmers like nature? Too many bugs. 2025-12-09 07:30:02.074360
+Data tallennettu: What do I look like? A JOKE MACHINE!? 2025-12-09 07:45:02.620624
+Data tallennettu: Why did the chicken get a penalty? For fowl play. 2025-12-09 08:00:02.160438
+Data tallennettu: What do you call a crowd of chess players bragging about their wins in a hotel lobby? Chess nuts boasting in an open foyer. 2025-12-09 08:15:02.225768
+Data tallennettu: Why don't React developers like nature? They prefer the virtual DOM. 2025-12-09 08:30:01.950409
+Data tallennettu: How much does a hipster weigh? An instagram. 2025-12-09 08:45:01.681250
+Data tallennettu: What did the mountain climber name his son? Cliff. 2025-12-09 09:00:02.735449
+Data tallennettu: Did you hear about the submarine industry? It really took a dive... 2025-12-09 09:15:02.952347
+Data tallennettu: What do elves post on Social Media? Elf-ies. 2025-12-09 09:30:01.900162
+Data tallennettu: Why did the programmer's wife leave him? He didn't know how to commit. 2025-12-09 09:45:02.579335
+Data tallennettu: A grocery store cashier asked if I would like my milk in a bag. I told her 'No, thanks. The carton works fine.' 2025-12-09 10:00:02.657637
+Data tallennettu: What do you call a cow on a trampoline? A milk shake! 2025-12-09 10:15:02.791462
+Data tallennettu: Why do pirates not know the alphabet? They always get stuck at "C". 2025-12-09 10:30:02.417166
+Data tallennettu: What happens to a frog's car when it breaks down? It gets toad away 2025-12-09 10:45:02.040966
+Data tallennettu: What do you call two barracuda fish? A Pairacuda! 2025-12-09 11:00:02.098683
+Data tallennettu: Why are oranges the smartest fruit? Because they are made to concentrate.  2025-12-09 11:15:01.946609
+Data tallennettu: How can you tell a vampire has a cold? They start coffin. 2025-12-09 11:30:02.279252
+Data tallennettu: What do you call a dad that has fallen through the ice? A Popsicle. 2025-12-09 11:45:02.094320
+Data tallennettu: Where do sheep go to get their hair cut? The baa-baa shop. 2025-12-09 12:00:01.883564
+Data tallennettu: What do you call a careful wolf? Aware wolf. 2025-12-09 12:15:02.630519
+Traceback (most recent call last):
+  File "/home/ubuntu/Linux-Administration/venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Data too long for column 'setup' at row 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Linux-Administration/cron/fetch_joke.py", line 21, in <module>
+    cursor.execute('INSERT INTO jokes_data (setup, punchline, timestamp) VALUES (%s, %s, %s)', (setup, punchline, timestamp))
+  File "/home/ubuntu/Linux-Administration/venv/lib/python3.12/site-packages/mysql/connector/cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+  File "/home/ubuntu/Linux-Administration/venv/lib/python3.12/site-packages/mysql/connector/opentelemetry/context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Linux-Administration/venv/lib/python3.12/site-packages/mysql/connector/connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.DataError: 1406 (22001): Data too long for column 'setup' at row 1
+Data tallennettu: How do you make holy water? You boil the hell out of it 2025-12-09 12:45:02.453643
+Data tallennettu: What’s 50 Cent’s name in Zimbabwe? 200 Dollars. 2025-12-09 13:00:02.086943
+Data tallennettu: I bought some shoes from a drug dealer. I don't know what he laced them with, but I was tripping all day! 2025-12-09 13:15:01.759881
+Data tallennettu: What's brown and sticky? A stick. 2025-12-09 13:30:02.379836
+Data tallennettu: How do you check if a webpage is HTML5? Try it out on Internet Explorer 2025-12-09 13:45:02.095521
+Data tallennettu: How do you generate a random string? Put a Windows user in front of Vim and tell them to exit. 2025-12-09 14:00:01.690930
+Data tallennettu: Why did the private classes break up? Because they never saw each other. 2025-12-09 14:15:02.306160
+Data tallennettu: What's Forrest Gump's password? 1Forrest1 2025-12-09 14:30:01.935875
+Data tallennettu: How do you make a hankie dance? Put a little boogie in it. 2025-12-09 14:45:02.540809
+Data tallennettu: What did the pirate say on his 80th birthday? Aye Matey! 2025-12-09 15:00:02.124062
+Data tallennettu: What are the strongest days of the week? Saturday and Sunday...the rest are weekdays. 2025-12-09 15:15:01.831727
+Data tallennettu: Where do programmers like to hangout? The Foo Bar. 2025-12-09 15:30:02.451038
+Data tallennettu: Why didn't the skeleton go for prom? Because it had nobody. 2025-12-09 15:45:02.089420
+Data tallennettu: How do you find Will Smith in the snow? Look for fresh prints. 2025-12-09 16:00:01.748871
+Data tallennettu: What did Michael Jackson name his denim store? Billy Jeans! 2025-12-09 16:15:02.362544
+Data tallennettu: How do you make a tissue dance? You put a little boogie on it. 2025-12-09 16:30:01.975753
+Data tallennettu: Why did the programmer quit their job? They didn't get arrays. 2025-12-09 16:45:01.555030
+Data tallennettu: What did one nut say as he chased another nut? I'm a cashew! 2025-12-09 17:00:02.749170
+Data tallennettu: Have you ever heard of a music group called Cellophane? They mostly wrap. 2025-12-09 17:15:01.728468
+Data tallennettu: When a dad drives past a graveyard: Did you know that's a popular cemetery? Yep, people are just dying to get in there 2025-12-09 17:30:02.327683
+Data tallennettu: Why did the invisible man turn down the job offer? He couldn't see himself doing it 2025-12-09 17:45:01.979603
+Data tallennettu: There are 10 types of people in this world... Those who understand binary and those who don't 2025-12-09 18:00:01.775111
+Data tallennettu: What is the difference between ignorance and apathy? I don't know and I don't care. 2025-12-09 18:15:02.449202
+Data tallennettu: Why are ghosts bad liars? Because you can see right through them! 2025-12-09 18:30:02.126360
+Data tallennettu: What’s the object-oriented way to become wealthy? Inheritance. 2025-12-09 18:45:01.851337
+Data tallennettu: Why do C# and Java developers keep breaking their keyboards? Because they use a strongly typed language. 2025-12-09 19:00:02.722936
+Data tallennettu: Knock knock. 
+ Who's there? 
+ Opportunity. That is impossible. Opportunity doesn’t come knocking twice! 2025-12-09 19:15:02.824541
+Data tallennettu: How good are you at Power Point? I Excel at it. 2025-12-09 19:30:02.423526
+Data tallennettu: What did the dog say to the two trees? Bark bark. 2025-12-09 19:45:02.025824
+Data tallennettu: Why did the programmer go to art school? He wanted to learn how to code outside the box. 2025-12-09 20:00:01.682050
+Data tallennettu: How good are you at Power Point? I Excel at it. 2025-12-09 20:15:02.299907
+Data tallennettu: What's red and bad for your teeth? A Brick. 2025-12-09 20:30:01.924834
+Data tallennettu: How do you find Will Smith in the snow? Look for fresh prints. 2025-12-09 20:45:03.011331
+Data tallennettu: Did you hear about the new restaurant on the moon? The food is great, but there’s just no atmosphere. 2025-12-09 21:00:02.199199
+Data tallennettu: Why do you never see elephants hiding in trees? Because they're so good at it. 2025-12-09 21:15:02.274418
+Data tallennettu: What do you call a pig that knows karate? A pork chop! 2025-12-09 21:30:01.974489
+Data tallennettu: What do you call sad coffee? Despresso. 2025-12-09 21:45:01.890122
+Data tallennettu: Why did the tree go to the dentist? It needed a root canal. 2025-12-09 22:00:03.036517
+Data tallennettu: What do you call a fly without wings? A walk. 2025-12-09 22:15:01.672177
+Data tallennettu: I dropped a pear in my car this morning. You should drop another one, then you would have a pair. 2025-12-09 22:30:02.811335
+Data tallennettu: Did you hear about the crime in the parking garage? It was wrong on so many levels. 2025-12-09 22:45:02.439673
+Data tallennettu: Why do bees hum? Because they don't know the words. 2025-12-09 23:00:02.528098
+Data tallennettu: Bad at golf? Join the club. 2025-12-09 23:15:02.157177
+Data tallennettu: What does C.S. Lewis keep at the back of his wardrobe? Narnia business! 2025-12-09 23:30:01.788657
+Data tallennettu: What did one wall say to the other wall? I'll meet you at the corner! 2025-12-09 23:45:02.395016
+Data tallennettu: What did the mountain climber name his son? Cliff. 2025-12-10 00:00:02.012071
+Data tallennettu: What's the difference between a hippo and a zippo? One is really heavy, the other is a little lighter. 2025-12-10 00:15:01.641810
+Data tallennettu: Why do ducks make great detectives? They always quack the case. 2025-12-10 00:30:02.869673
+Data tallennettu: What did the grape do when he got stepped on? He let out a little wine. 2025-12-10 00:45:02.461960
+Data tallennettu: Where does Fonzie like to go for lunch? Chick-Fil-Eyyyyyyyy. 2025-12-10 01:00:02.606451
+Data tallennettu: What is the tallest building in the world? The library, it’s got the most stories! 2025-12-10 01:15:02.419727
+Data tallennettu: Why did the private classes break up? Because they never saw each other. 2025-12-10 01:30:02.160953
+Data tallennettu: What did the 0 say to the 8? Nice belt. 2025-12-10 01:45:01.783724
+Data tallennettu: What did the duck say when he bought lipstick? Put it on my bill 2025-12-10 02:00:03.806958
+Data tallennettu: How do you get a baby alien to sleep? You rocket. 2025-12-10 02:15:01.944180
+Data tallennettu: Why can't a bicycle stand on its own? It's two-tired. 2025-12-10 02:30:02.599088
+Data tallennettu: How do you fix a broken pizza? With tomato paste. 2025-12-10 02:45:02.283115
+Data tallennettu: What did Michael Jackson name his denim store? Billy Jeans! 2025-12-10 03:00:02.031627
+Data tallennettu: How can you tell a vampire has a cold? They start coffin. 2025-12-10 03:15:01.880336
+Data tallennettu: Where does batman go to the bathroom? The batroom. 2025-12-10 03:30:01.883415
+Data tallennettu: How do you tell the difference between a crocodile and an alligator? You will see one later and one in a while. 2025-12-10 03:45:02.992456
+Data tallennettu: What is a vampire's favorite fruit? A blood orange. 2025-12-10 04:00:01.661979
+Data tallennettu: How does a dyslexic poet write? Inverse. 2025-12-10 04:15:02.708290
+Data tallennettu: Why don't oysters give to charity? Because they're shellfish. 2025-12-10 04:30:02.468457
+Data tallennettu: Why did the developer quit his job? Because he didn't get arrays. 2025-12-10 04:45:02.527212
+Data tallennettu: Why is peter pan always flying? Because he neverlands 2025-12-10 05:00:02.105719
+Data tallennettu: What do you call a dictionary on drugs? High definition. 2025-12-10 05:15:02.627602
+Data tallennettu: Why would a guitarist become a good programmer? He's adept at riffing in C#. 2025-12-10 05:30:02.597114
+Data tallennettu: What do you call a group of disorganized cats? A cat-tastrophe. 2025-12-10 05:45:03.747021
+Data tallennettu: What kind of dinosaur loves to sleep? A stega-snore-us. 2025-12-10 06:00:02.297704
+Data tallennettu: Why did the cookie go to the doctor?  Because it was feeling crumbly. 2025-12-10 06:15:01.925046
+Data tallennettu: What do ghosts call their true love? Their ghoul-friend 2025-12-10 06:30:01.904388
+Data tallennettu: 99.9% of the people are dumb! Fortunately I belong to the remaining 1% 2025-12-10 06:45:02.576747
+Data tallennettu: Why did the barber win the race? He took a short cut. 2025-12-10 07:00:02.284110
+Data tallennettu: Where did you learn to make ice cream? Sunday school. 2025-12-10 07:15:01.888873
+Data tallennettu: Why did the programmer go to art school? He wanted to learn how to code outside the box. 2025-12-10 07:30:02.434488
+Data tallennettu: Did you hear about the chameleon who couldn't change color? They had a reptile dysfunction. 2025-12-10 07:45:02.019031
+Data tallennettu: How do you fix a broken pizza? With tomato paste. 2025-12-10 08:00:01.630861
+Data tallennettu: What is a witch's favorite subject in school? Spelling! 2025-12-10 08:15:02.289971
+Data tallennettu: Want to hear my pizza joke? Never mind, it's too cheesy. 2025-12-10 08:30:02.462602
+Data tallennettu: Why are fish easy to weigh? Because they have their own scales. 2025-12-10 08:45:02.064667
+Data tallennettu: How come the stadium got hot after the game? Because all of the fans left. 2025-12-10 09:00:01.683233
+Data tallennettu: Why did the coffee file a police report? It got mugged. 2025-12-10 09:15:02.280395
+Data tallennettu: What do you get when you cross a rabbit with a water hose? Hare spray. 2025-12-10 09:30:01.874652
+Data tallennettu: How do you steal a coat? You jacket. 2025-12-10 09:45:02.197696
+Data tallennettu: Why did the programmer always mix up Halloween and Christmas? Because Oct 31 equals Dec 25. 2025-12-10 10:00:01.790973
+Data tallennettu: What do you call a bee that lives in America? A USB. 2025-12-10 10:15:02.502028
+Data tallennettu: What did one wall say to the other wall? I'll meet you at the corner! 2025-12-10 10:30:02.172849
+Data tallennettu: Why did the tree go to the dentist? It needed a root canal. 2025-12-10 10:45:01.754449
+Data tallennettu: What has ears but cannot hear? A field of corn. 2025-12-10 11:00:02.292631
+Data tallennettu: The punchline often arrives before the set-up. Do you know the problem with UDP jokes? 2025-12-10 11:15:02.029921
+Data tallennettu: What has ears but cannot hear? A field of corn. 2025-12-10 11:30:01.663421
+Data tallennettu: Two guys walk into a bar . . . The first guy says "Ouch!" and the second says "Yeah, I didn't see it either." 2025-12-10 11:45:02.178864
+Data tallennettu: Why did the girl smear peanut butter on the road? To go with the traffic jam. 2025-12-10 12:00:01.845773
+Data tallennettu: Two guys walk into a bar . . . The first guy says "Ouch!" and the second says "Yeah, I didn't see it either." 2025-12-10 12:15:02.055744
+Data tallennettu: What cheese can never be yours? Nacho cheese. 2025-12-10 12:30:02.331599
+Data tallennettu: Why are football stadiums so cool? Because every seat has a fan in it. 2025-12-10 12:45:01.948253
+Data tallennettu: Why do mathematicians hate the U.S.? Because it's indivisible. 2025-12-10 13:00:03.037320
+Data tallennettu: Why did the kid cross the playground? To get to the other slide. 2025-12-10 13:15:02.104580
+Data tallennettu: What is a vampire's favorite fruit? A blood orange. 2025-12-10 13:30:01.730660
+Data tallennettu: Which song would an exception sing? Can't catch me - Avicii 2025-12-10 13:45:02.273206
+Data tallennettu: How can you tell a vampire has a cold? They start coffin. 2025-12-10 14:00:01.918974
+Data tallennettu: Is the pool safe for diving? It deep ends. 2025-12-10 14:15:02.478827
+Data tallennettu: What did celery say when he broke up with his girlfriend? She wasn't right for me, so I really don't carrot all. 2025-12-10 14:30:02.072184
+Data tallennettu: What is the difference between ignorance and apathy? I don't know and I don't care. 2025-12-10 14:45:01.659576
+Data tallennettu: Did you hear about the runner who was criticized? He just took it in stride 2025-12-10 15:00:02.524998
+Data tallennettu: Why did the cowboy have a weiner dog? Somebody told him to get a long little doggy. 2025-12-10 15:15:01.967827
+Data tallennettu: What did the Java code say to the C code? You've got no class. 2025-12-10 15:30:02.520367
+Data tallennettu: Do you know what the word 'was' was initially? Before was was was was was is. 2025-12-10 15:45:02.226400
+Data tallennettu: Why do choirs keep buckets handy? So they can carry their tune 2025-12-10 16:00:01.793335
+Data tallennettu: How was the snow globe feeling after the storm? A little shaken. 2025-12-10 16:15:02.536518
+Data tallennettu: What is the leading cause of dry skin? Towels 2025-12-10 16:30:02.487005
+Data tallennettu: How many hipsters does it take to change a lightbulb? Oh, it's a really obscure number. You've probably never heard of it. 2025-12-10 16:45:02.363154
+Data tallennettu: Why do wizards clean their teeth three times a day? To prevent bat breath! 2025-12-10 17:00:02.213493
+Data tallennettu: What do you call a bee that lives in America? A USB. 2025-12-10 17:15:02.321088
