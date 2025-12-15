@@ -110,7 +110,7 @@ jobs:
             key: ${{ secrets.SSH_KEY }}
             port: 22
             source: lemp-kontti/docker-compose.prod.yml
-            target: /tmp/docker-compose.yml
+            target: /tmp/
 
         - name: Move docker-compose.prod.yml to /opt/lemp/ on VM
           uses: appleboy/ssh-action@v1.0.3
@@ -120,7 +120,7 @@ jobs:
             key: ${{ secrets.SSH_KEY }}
             port: 22
             script: |
-              sudo cp /tmp/docker-compose.yml /opt/lemp/docker-compose.yml
+              sudo cp /tmp/docker-compose.prod.yml /opt/lemp/docker-compose.yml
             
 
   deploy:
