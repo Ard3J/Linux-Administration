@@ -5,10 +5,10 @@ import mysql.connector
 #flask app instance update joo
 app = Flask(__name__)
 
-DB_HOST = os.getenv('DB_HOST', 'db')
-DB_USER = os.getenv('DB_USER', 'appuser')
-DB_PASSWORD = os.getenv('DB_PASSWORD', 'changeme')
-DB_NAME = os.getenv('DB_NAME', 'appdb')
+DB_HOST = os.getenv('DB_HOST')
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+DB_NAME = os.getenv('DB_NAME')
 
 @app.get('/api/health')
 def health():
@@ -44,6 +44,11 @@ def index():
     row = cur.fetchone()
     cur.close(); conn.close()
     return jsonify(message=row[0])
+
+@app.get('/')
+def root_check():
+    """Returns a simple JSON status for the root path."""
+    return jsonify(status='Backend is running', version='1.0')
 
 if __name__ == '__main__':
     # Dev-only fallback
