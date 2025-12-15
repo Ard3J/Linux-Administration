@@ -147,7 +147,7 @@ jobs:
         #    DB_NAME=${{ secrets.DB_NAME }}
           script: |
             export DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
-            export MYSQL_ROOT_PASSWORD=${{ secrets.DB_ROOT_PASSWORD }}
+            export MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }}
             export DB_HOST=db
             export DB_USER=${{ secrets.DB_USER }}
             export DB_PASSWORD=${{ secrets.DB_PASSWORD }}
