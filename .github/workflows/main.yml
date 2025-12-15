@@ -98,7 +98,7 @@ jobs:
             port: 22
             source: lemp-kontti/db/init/init.sql
             target: /opt/lemp/db/init/
-            strip_components: 2
+            strip_components: 3
 
         
 
