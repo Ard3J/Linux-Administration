@@ -22,7 +22,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install backend dependencies
-        run: pip install -r backend/requirements.txt
+        run: pip install -r lemp-kontti/backend/requirements.txt
 
       
 
@@ -39,7 +39,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: backend/Dockerfile
+          file: lemp-kontti/backend/Dockerfile
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/lemp-backend:latest
@@ -51,7 +51,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: frontend/Dockerfile
+          file: lemp-kontti/frontend/Dockerfile
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/lemp-frontend:latest
@@ -96,7 +96,7 @@ jobs:
             username: ${{ secrets.SSH_USER }}
             key: ${{ secrets.SSH_KEY }}
             port: 22
-            source: db/init/init.sql
+            source: lemp-kontti/db/init/init.sql
             target: /opt/lemp/db/init/
             strip_components: 2
 
@@ -109,7 +109,7 @@ jobs:
             username: ${{ secrets.SSH_USER }}
             key: ${{ secrets.SSH_KEY }}
             port: 22
-            source: docker-compose.prod.yml
+            source: lemp-kontti/docker-compose.prod.yml
             target: /tmp/
 
         - name: Move docker-compose.prod.yml to /opt/lemp/ on VM
