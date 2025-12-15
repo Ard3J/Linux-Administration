@@ -40,8 +40,9 @@ def home():
 				<h1>Linux Administration LEMP sivu</h1>
 				<p>{mysql_message}</p>
 				<p>MySQL server time {mysql_time}</p>
-				<p>Streamlit app <a href="http://86.50.21.9/data-analysis">linkki</a></p>
-				<p>MQTT chat <a href="http://86.50.21.9./chat/">linkki</a></p>
+				<p>Streamlit app <a href="/data-analysis">linkki</a></p>
+				<p>MQTT chat <a href="/chat/">linkki</a></p>
+				<p>Minikube <a href="/kube/">linkki</a><p/>
 			</div>
 		</body>
 	</html>
