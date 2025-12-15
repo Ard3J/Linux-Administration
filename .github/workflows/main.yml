@@ -138,14 +138,20 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: 22
-          envs: |
-            DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
-            MYSQL_ROOT_PASSWORD=${{ secrets.DB_ROOT_PASSWORD }} 
-            DB_HOST=db
-            DB_USER=${{ secrets.DB_USER }}                      
-            DB_PASSWORD=${{ secrets.DB_PASSWORD }}              
-            DB_NAME=${{ secrets.DB_NAME }}
+        #  envs: |
+        #    DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
+        #    MYSQL_ROOT_PASSWORD=${{ secrets.DB_ROOT_PASSWORD }} 
+        #    DB_HOST=db
+        #    DB_USER=${{ secrets.DB_USER }}                      
+        #    DB_PASSWORD=${{ secrets.DB_PASSWORD }}              
+        #    DB_NAME=${{ secrets.DB_NAME }}
           script: |
+            export DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
+            export MYSQL_ROOT_PASSWORD=${{ secrets.DB_ROOT_PASSWORD }}
+            export DB_HOST=db
+            export DB_USER=${{ secrets.DB_USER }}
+            export DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            export DB_NAME=${{ secrets.DB_NAME }}
             set -e
             cd /opt/lemp
             
