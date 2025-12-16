@@ -17,7 +17,7 @@
   
   <div id="msg">Loading...</div>
   <script>
-    fetch('/api')
+    fetch('/api/')
       .then(r => r.json())
       .then(d => { document.getElementById('msg').innerText = d.message; })
       .catch(e => { document.getElementById('msg').innerText = 'API error: ' + e; });
