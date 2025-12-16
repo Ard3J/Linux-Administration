@@ -42,7 +42,8 @@ def home():
 				<p>MySQL server time {mysql_time}</p>
 				<p>Streamlit app <a href="/data-analysis">linkki</a></p>
 				<p>MQTT chat <a href="/chat/">linkki</a></p>
-				<p>Minikube <a href="/kube/">linkki</a><p/>
+				<p>Minikube <a href="/kube/">linkki</a></p>
+				<p>CI/CD <a href="/cicd/">linkki</a></p>
 			</div>
 		</body>
 	</html>
