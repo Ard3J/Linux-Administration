@@ -28,7 +28,7 @@ def time():
     cur.execute("SELECT NOW()")
     row = cur.fetchone()
     cur.close(); conn.close()
-    #Standardised timeformat, frontend then makes it match location
+    #Standardised timeformat, frontend then makes it match location 
     server_time_dt = row[0]
     iso_time_str = server_time_dt.isoformat()
     return jsonify(message={'time': iso_time_str})
