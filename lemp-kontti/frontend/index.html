@@ -11,7 +11,7 @@
   <script>
     fetch('/api/health')
       .then(r => r.json())
-      .then(d => { document.getElementById('health').innerText = d.health; })
+      .then(d => { document.getElementById('health').innerText = d.message; })
       .catch(e => { document.getElementById('health').innerText = 'API error: ' + e; });
   </script>
   
