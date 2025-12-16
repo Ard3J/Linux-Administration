@@ -30,7 +30,7 @@ def time():
     cur.close(); conn.close()
     return jsonify(message={'time': row[0]})
 
-@app.get('/api')
+@app.get('/api/')
 def index():
     """Simple endpoint that greets from DB."""
     conn = mysql.connector.connect(
