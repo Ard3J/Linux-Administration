@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 import os
 import mysql.connector
+from datetime import datetime, timezone    #Aikavyöhykettä käsittelemään
 
 #flask app instance update joo
 app = Flask(__name__)
@@ -28,9 +29,15 @@ def time():
     cur.execute("SELECT NOW()")
     row = cur.fetchone()
     cur.close(); conn.close()
-    #Standardised timeformat, frontend then makes it match location 
+    #Standardisoi aikaformaatin,. niin frontend pitäisi laittaa paikalliseen aikaan 
     server_time_dt = row[0]
-    iso_time_str = server_time_dt.isoformat()
+    if server_time_dt.tzinfo is None:
+        # Asettaa aikavyöhykkeen oletetuksi UTC:ksi
+        utc_dt = server_time_dt.replace(tzinfo=timezone.utc)
+    else:
+        # Jos tzinfo on jo olemassa
+        utc_dt = server_time_dt.astimezone(timezone.utc)
+    iso_time_str = utc_dt.isoformat()
     return jsonify(message={'time': iso_time_str})
 
 @app.get('/api/')
