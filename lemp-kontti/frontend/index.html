@@ -11,7 +11,7 @@
   <script>
     fetch('/api/health')
       .then(r => r.json())
-      .then(d => { document.getElementById('health').innerText = d.message; })
+      .then(d => { document.getElementById('health').innerText = d.message.status; })
       .catch(e => { document.getElementById('health').innerText = 'API error: ' + e; });
   </script>
   
@@ -27,7 +27,7 @@
   <script>
     fetch('/api/time')
       .then(r => r.json())
-      .then(d => { document.getElementById('time').innerText = d.time; })
+      .then(d => { document.getElementById('time').innerText = d.message.time; })
       .catch(e => { document.getElementById('time').innerText = 'API error: ' + e; });
   </script>
 
