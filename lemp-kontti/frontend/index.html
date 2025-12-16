@@ -11,7 +11,7 @@
   <script>
     fetch('/cicd/api/health')
       .then(r => r.json())
-      .then(d => { document.getElementById('health').innerText = d.message.status; })
+      .then(d => { document.getElementById('health').innerText = 'Status: ' +d.message.status; })
       .catch(e => { document.getElementById('health').innerText = 'API error: ' + e; });
   </script>
   
