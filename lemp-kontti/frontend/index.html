@@ -27,7 +27,17 @@
   <script>
     fetch('/cicd/api/time')
       .then(r => r.json())
-      .then(d => { document.getElementById('time').innerText = d.message.time; })
+      .then(d => {
+        const serverDate = new Date(d.message.time);
+        const localTimeString = serverDate.toLocaleTimeString('fi-FI', { 
+                year: 'numeric', 
+                month: 'numeric', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            });
+        document.getElementById('time').innerText = localTimeString; })
       .catch(e => { document.getElementById('time').innerText = 'API error: ' + e; });
   </script>
 
