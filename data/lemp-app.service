@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve Flask LEMP app
+After=network.target
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/Linux-Administration
+Environment="PATH=/home/ubuntu/Linux-Administration/venv/bin"
+ExecStart=/home/ubuntu/Linux-Administration/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:5000 app:app
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=multi-user.target

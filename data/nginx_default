@@ -43,33 +43,85 @@ server {
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name _;
+	server_name 86.50.21.9 _;
 
-	location / {
+#	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
-	}
+#		try_files $uri $uri/ =404;
+#	}
 
 	location /data-analysis/ {
-		proxy_pass http://127.0.0.1:8501/data-analysis/;
+		proxy_pass http://127.0.0.1:8501;
+
 		proxy_http_version 1.1;
-		proxy_set_header Host $host;
-		proxy_set_header X-Real-IP $remote_addr;
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		proxy_set_header X-Forwarded-Proto $scheme;
 		proxy_set_header Upgrade $http_upgrade;
 		proxy_set_header Connection "upgrade";
-	}
-
-	location = / {
-		proxy_pass http://127.0.0.1:5000/;
-		proxy_http_version 1.1;
 		proxy_set_header Host $host;
 		proxy_set_header X-Real-IP $remote_addr;
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 		proxy_set_header X-Forwarded-Proto $scheme;
 	}
+
+	location /chat {
+		alias /var/www/html/chat;
+		index index.html;
+		try_files $uri $uri/ /chat/index.html;
+	}
+
+	location /mqtt {
+		proxy_pass http://127.0.0.1:9001;
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection "upgrade";
+		proxy_set_header Host $host;
+		proxy_read_timeout 86400;
+		proxy_send_timeout 86400;
+	}
+
+	location /api/ {
+		proxy_pass http://127.0.0.1:5001;
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+	}
+
+	location /kube/ {
+		proxy_pass http://192.168.49.2:32511;
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_request_upgrade;
+		proxy_set_header Connection "upgrade";
+
+		proxy_connect_timeout 60s;
+		proxy_send_timeout 60s;
+		proxy_read_timeout 60s;
+	}
+
+	location /cicd/ {
+		proxy_pass http://127.0.0.1:8001/;
+                proxy_http_version 1.1;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+	}
+
+	location = /cicd {
+		return 301 /cicd/;
+	}
+
+        location / {
+                proxy_pass http://127.0.0.1:5000;
+                proxy_http_version 1.1;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+        }
 
 	# pass PHP scripts to FastCGI server
 	#
